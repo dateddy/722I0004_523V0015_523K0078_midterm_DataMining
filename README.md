@@ -2,7 +2,7 @@
 movie-recommender/
 │
 ├── data/
-│   ├── raw/                        # Original unzipped files (never modify)
+│   ├── raw/                        
 │   │   ├── ratings.csv
 │   │   ├── movies.csv
 │   │   ├── tags.csv
@@ -52,5 +52,4 @@ movie-recommender/
 │
 ├── requirements.txt                # All dependencies
 ├── README.md                       # Project overview & how to run
-└── main.py                         # (Optional) run full pipeline end-to-end
 ```
