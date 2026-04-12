@@ -1,0 +1,17 @@
+
+# HYBRID RECOMMENDATION SYSTEM - DEPLOYMENT GUIDE
+
+## Models Compared
+- Baseline (Popularity): 0.006 NDCG@10, 0.7 ms
+- Item-Based CF: 0.043 NDCG@10, 9,576 ms
+- Genre-Based: 0.007 NDCG@10, 0.8 ms
+- Weighted Hybrid A: 0.020 NDCG@10, 9,596 ms
+- Weighted Hybrid B: 0.016 NDCG@10, 9,538 ms
+- Weighted Hybrid C: 0.016 NDCG@10, 9,555 ms
+- Switching Hybrid: 0.043 NDCG@10, ~5,000 ms (avg, with route-based timing)
+
+## Recommendation for Deployment
+Use Switching Hybrid with threshold=20 and caching strategy:
+- Inference speed: O(1) for warm users (cached)
+- Accuracy: 6.5x improvement for warm users
+- Cold-start: Graceful degradation to genre-based

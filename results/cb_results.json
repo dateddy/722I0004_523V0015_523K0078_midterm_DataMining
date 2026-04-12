@@ -1,0 +1,18 @@
+{
+  "model": "ContentBasedCF",
+  "hyperparameters": {
+    "n_neighbors": 20,
+    "sim_threshold": 0.0,
+    "blend_weight": 0.6
+  },
+  "metrics": {
+    "rmse": 0.998518,
+    "mae": 0.817686,
+    "mape": 32.59403446080074
+  },
+  "coverage": {
+    "n_users": 12773,
+    "n_movies": 5000,
+    "n_features": 20
+  }
+}
